@@ -1,0 +1,209 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel {
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes spark {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+  }
+}
+
+.product-image::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.2) 0%, transparent 70%);
+  animation: spark 2s infinite;
+}
+
+.limited-edition {
+  animation: glow 2s infinite;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.parallax-wrapper {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Add additional hover effects from footer */
+.hover-effect {
+  position: relative;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  font-size: 17px;
+  color: #000;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.hover-effect:hover::after {
+  width: 100%;
+}
+
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
+.video-card {
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+}
+
+.carousel {
+  scroll-behavior: smooth;
+}
+
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images {
+  position: relative;
+}
+
+.carousel-images img,
+.carousel-images video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-images img.active,
+.carousel-images video.active {
+  opacity: 1;
+}
+
+.carousel-images img:not(.active),
+.carousel-images video:not(.active) {
+  opacity: 0;
+}
+
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
+.video-card {
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+}
+
+.carousel {
+  scroll-behavior: smooth;
+}
+
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images {
+  position: relative;
+}
+
+.carousel-images img,
+.carousel-images video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-images img.active,
+.carousel-images video.active {
+  opacity: 1;
+}
+
+.carousel-images img:not(.active),
+.carousel-images video:not(.active) {
+  opacity: 0;
+}
